@@ -1,0 +1,179 @@
+naranja = #C2A125
+
+.procesar_pago
+	.error_direccion
+		display none;
+	.lista-direccion
+		border-bottom 1px solid #f4f4f4
+		padding 5px 10px
+		p
+			margin 0
+		&:hover,.activo
+			background #F4F4F4;
+	h4
+		font-size 20px
+		margin 10px 0
+		.required-label
+			float right
+			font-size 14px
+			font-style italic
+			&:before
+				content " * "
+				color naranja
+				font-size 2em	
+	.columnas_pago
+		.section_panel
+			margin-bottom 30px
+			position relative
+			&.correcto
+				.panel_header
+					h3
+						.glyphicon
+							display inline-block
+							color green
+			&.is-guardado
+				.panel_header
+					cursor pointer
+					h3						
+						.icon-check
+							display inline-block
+				.panel_cuerpo
+					display none
+			&.is-activo
+				.panel_header
+					background #111
+					color #fff
+				.panel_cuerpo
+					display block
+			&.orden_sumary
+				.edit
+					color naranja
+				.panel_cuerpo
+					display block
+			.panel_header
+				background #f4f4f4
+				padding 18px 30px
+				transition .2
+				h3
+					margin 0
+					font-size 20px
+					.icon-check
+						color green
+						display none
+					.editar
+						display none
+						float right
+						text-decoration underline
+						color green
+						font-size 0.8em
+			.panel_cuerpo
+				display none
+			.panel_seccion
+				padding 22px 30px 8px
+				border-bottom 2px solid #F4F4F4
+				border-right 2px solid #F4F4F4
+				border-left 2px solid #F4F4F4
+				position relative
+				min-height 88px
+				.icono
+					position absolute
+					top 40%
+					right 40px
+					color green
+				.tab-content
+					margin 15px 0
+			.panel_seccion_final
+				padding 30px
+				background #f4f4f4
+				min-height 10px
+				overflow hidden
+				.requiere_label
+					&:before
+						content " * "
+						color naranja
+						font-size 2em
+				button
+					float right
+					
+	.lienas_resumen
+		.linea
+			display flex
+			.img_resumen
+				width 40%
+			.detalle_resumen
+				font-size 0.8em
+				width 60%
+	.orden_sumary
+		table
+			width 100%
+			font-family f_imprenta			
+	.resumen_total
+		h3
+			margin 0
+		.total_precio
+			color green
+			font-weight 700
+			font-size 1.4em
+	.tajetas-habilitadas
+		li
+			display inline-block
+			width 51px
+			height 32px
+			background-repeat no-repeat
+			background-image url('../imgs/payment.png');
+		.card_visa
+			background-position -108px 0
+		.card_master
+			background-position -214px 0
+		.card_discover
+			background-position -269px 0
+		.card_american
+			background-position -54px -33px
+	#paypal
+		.card_paypal
+			display inline-block
+			width 51px
+			height 32px
+			background-repeat no-repeat
+			background-image url('../imgs/payment.png');
+			background-position -161px 0
+.paso_pago
+	.cvc_tarjeta
+		width 30%
+		display inline-block
+	.img_cvc
+		display inline-block
+		width 50%
+		margin-left 20px
+		.sprite-cvc
+			background-image url('../imgs/sprite.pay.png');			
+			width 68px
+			height 46px 
+			display inline-block
+			background-position 0 -290px
+	.panel_seccion
+		.nav.nav-tabs
+			border none
+			li
+				width 100%
+				a
+					border #ddd
+					border-radius 5px		
+					font-family f_imprenta
+					font-size 1.1em
+					color #111						
+					background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+				&.active						
+					a
+						background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+						
+					
+	.panel_seccion_final
+		button
+			display none
+			&.visto
+				display block
+	
+.paso_identificar
+	.crear_user
+		border-left 2px solid #ccc

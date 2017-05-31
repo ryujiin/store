@@ -1,0 +1,1 @@
+define(["jquery","underscore","backbone","swig"],function(e,t,n,r){var i=n.View.extend({template:r.compile(e("#ajax_loader_tlp").html()),id:"",className:"",events:{},initialize:function(){this.render()},render:function(){this.$el.html(this.template())}});return i});

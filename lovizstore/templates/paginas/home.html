@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{%block titulo_web%}
+	{{pagina.titulo}}
+{%endblock%}
+
+{%block descripcion_web%}
+    <meta name="description" content="{{pagina.descripcion}}" />      
+{%endblock%}
+
+
+{%block contenido%}
+<section id="seccion_top">
+	
+</section>	
+<section id="middle" class="container-fluid">
+	<div class="row">
+		{%if pagina%}
+		<section id="seccion_left" class="col-md-2"></section>
+		<section id="seccion_center" class="col-md-8">{{cuerpo|safe}}</section>	
+		<section id="seccion_right" class="col-md-2"></section>
+		{%else%}
+		<p>Crea una pagina de inicio para la web en <a href="/admin/">Administracion</a> </p>
+		{%endif%}
+	</div>		
+</section>	
+<section id="seccion_bottom"></section>
+{%endblock%}

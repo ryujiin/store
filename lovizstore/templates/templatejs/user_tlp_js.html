@@ -1,0 +1,360 @@
+{% verbatim %}	
+
+<script id="user_links_template" type="text/template">
+	{%if id %}
+		<li><a href="/usuario/perfil/" class="link">Bienvenido! {{first_name}} {{last_name}}</a></li>
+		<li><a href="/salir/" class="">(Salir)</a></li>
+	{%else%}
+		<li><a href="#" class="ingresar_user mostrar">Ingresar</a></li>
+		<li><a href="#" class="unirme_user mostrar">Unirme</a></li>		
+	{%endif%}
+</script>
+
+<script id="user_sidebar_template" type="text/template">
+	<div class="header-account sidebar">
+	  <h1>Bienvenido</h1>
+	  <div class="grid_1">
+	    <div class="login-box login-account " data-activo="login">
+	      <h2 class="section-header active">Ingresa a cuenta existente</h2>
+	      <div class="login-box-content returning-customers clearfix">
+	        <p>Si usted esta registrada en LovizDelCarpio.com, porfavor ingresa su email y contraseña.</p>
+	        <div id="dwfrm_login"></div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="grid_2">
+	    <div class="login-box login-create-account clearfix" data-activo="registro">
+	      <h2 class="section-header">Nuevo Cliente</h2>
+	      <div class="login-box-content clearfix">
+	        <div id="crear_login_sidebar"></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</script>
+
+<script id="user_formLogin_tlp" type="text/template">
+	<div class="panel panel-default">
+		<div class="panel-heading">Ingresar a mi cuenta</div>
+		<div class="panel-body">
+			<div class="login_facebook">
+				<a class="btn btn-facebook" href="/login/facebook/">
+					<span class="icon-facebook"></span>Ingresar con Facebook
+				</a>
+			</div>	  
+			<form class="login">
+				<div class="error_form"></div>
+				<div class="form-group campo_correo">
+					<label>*Correo Electronico</label>
+					<input type="email" class="form-control" data-contenedor="campo_correo"/>
+					<div class="error"></div>
+				</div>
+				<div class="form-group campo_pass">
+					<label>*Contraseña</label>
+					<input type="password" class="form-control" data-contenedor="campo_pass"/>
+					<div class="error"></div>
+				</div>
+				<a href="/" class="mostrar_olvido">¿Olvido su contraseña?</a>
+				<div class="form-group form-row-button">
+					<button type="submit" value="ingresar" class="btn btn-contraste btn-default">Ingresar</button>
+				</div>
+			</form>
+			<div class="olvido_pass">
+				<div class="cerrar-modal">
+					<span class="icon-cross2"></span>
+				</div>
+				<div class="caja">
+
+					<form class="form_olvido">
+						<h4>¿Olvido Su Contraseña?</h4>
+						<p class="texto_alerta"></p>
+						<p>Proporcione el correo electrónico de su cuenta para recibir un correo electrónico para restablecer su contraseña.</p>
+						<div class="form-group correo_reset">
+							<label>*Correo</label>
+							<input type="email" class="form-control correo_reset_pass"/>
+						</div>
+						<div>
+							<button type="submit" value="enviar_reset" class="btn btn-default">Cambiar Contraseña</button>
+						</div>
+					</form>					
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="user_formCrear" type="text/template">
+	<div class="panel panel-default form_crear_user">
+		<div class="panel-heading">Crear una cuenta LovizDC.com</div>
+		<div class="panel-body">
+			<div class="datos_crear">
+				<p>Y aprovéchate de los beneficios de tener una cuenta:</p>
+				<ul>
+					<li>Ahorra tiempo cuando compres</li>
+					<li>Sigue tus pedidos</li>
+					<li>Incluye varias direcciones de envío</li>
+				</ul>
+				<button class="btn btn-contraste btn-default boton-crear">Crear una Cuenta</button>
+			</div>
+			<div class="error_form"></div>
+			<form>
+				<div class="form-group campo_nombre">
+					<label class="control-label" for="">*Nombre</label>
+					<input type="text" class="form-control" data-contenedor="campo_nombre">
+					<div class="error"></div>
+				</div>
+				<div class="form-group campo_apellido">
+					<label class="control-label" for="">*Apellido</label>
+					<input type="text" class="form-control"  data-contenedor="campo_apellido">
+					<div class="error"></div>			
+				</div>
+				<div class="form-group campo_correo">
+					<label class="control-label" for="">*Correo electronico</label>
+					<input type="email" class="form-control" placeholder="" data-contenedor="campo_correo">
+					<div class="error"></div>			
+				</div>
+				<div class="form-group campo_pass">
+					<label class="control-label" for="">*Contraseña</label>
+					<input type="password" class="form-control"  data-contenedor="campo_pass">
+					<div class="error"></div>			
+				</div>
+			    <button type="submit" value="ingresar" class="btn btn-default">Crear Cuenta</button>
+			</form>
+		</div>
+	</div>	
+</script>
+
+<script id="page_user_Anonimo" type="text/template">
+	<div class="nav-breadcrumb"></div>
+	<div class="container-fluid">
+		<h1>Bienvenido</h1>
+		<div class="row">
+			<div class="columna1 col-md-6">
+			</div>
+			<div class="columna2 col-md-6"></div>
+		</div>
+	</div>
+</script>
+
+<script id="page_user_tlp" type="text/template">
+	<div class="pt_account Account-Show account-welcome container">
+	  <div id="" class="col-md-9">
+	    <h1 class="current-customer-logout">
+	    	<span class="account-sub-header">Bienvenido</span>
+	    	<span class="first-name">{{first_name}} </span>
+	    	<span class="last-name">{{last_name}}</span>
+	    	<span class="account-logout">(<a href="/salir/" class="salir">Salir</a>)</span></h1>
+	    <div class="account-landing">
+	      <div class="content-asset">
+	        <div id="welcomeInfo" class="margin-bot-20">
+	          <div id="leftInfo">
+	            <h3>Informacion de Cuenta</h3>
+	            <a href="#" class="acctNavLinks" data-toggle="modal" data-target="#usuario_edit">
+	            	Administrar informacion de cuenta</a><br/><br/>
+	            <h3>Direcciones</h3>
+	            <a href="#" class="acctNavLinks" data-toggle="modal" data-target="#usuario_direcciones">Gestiona tus direcciones de facturacion y envio</a><br/><br/>	           
+	            <h3>Lista de Pedidos</h3>
+	            <a href="#" class="acctNavLinks" data-toggle="modal" data-target="#usuario_pedidos">Comprueba el estado de sus pedidos</a><br/><br/>
+	            <!--
+	            <h3>Lista de Deseos</h3>
+	            <a href="#" class="acctNavLinks" data-toggle="modal" data-target="#usuario_lista_deseos">Ver o modificar productos de la lista o invitar amigos.</a>
+	        	-->
+	          </div>
+	          <div id="rightInfo"></div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="" class="nav col-md-3">
+	  	<!--
+	    <nav>
+	      <div class="secondary-navigation">
+	        <div class="content-asset">
+	          <ul class="account-nav-top no-list">
+	            <li>
+	              <ul class="account-logout-nav no-list">
+	                <li class="navlink"><a href="/" class="btn btn-default">Salir</a></li>
+	              </ul>
+	            </li>
+	            <li>
+	              <ul class="account-settings-nav no-list">
+	                <li>
+	                  <h3>Configuraciones de la Cuenta</h3>
+	                </li>
+	                <li class="navlink personal-information"><a href="/" class="link">Informacion Personal</a></li>
+	                <li class="navlink billing-shipping-address"><a href="/" class="link">Facturacion y envio Direccion</a></li>
+	                <li class="navlink payment-settings"><a href="/" class="link">Ajustes de Pago</a></li>
+	              </ul>
+	            </li>
+	            <li>
+	              <ul class="order-history-nav no-list">
+	                <li>
+	                  <h3>Historial de Pedidos</h3>
+	                </li>
+	                <li><a href="/">Mira tu historial de pedidos</a></li>
+	              </ul>
+	            </li>
+	            <li>
+	              <ul class="wish-list-nav no-list">
+	                <li>
+	                  <h3>Lista de Deseos</h3>
+	                </li>
+	                <li><a href="/">Modifica e Invita amigos</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+	-->
+	  </div>
+	</div>
+	<div id="usuario_edit" class="modal fade"></div>
+	<div id="usuario_direcciones" class="modal fade"></div>
+	<div id="usuario_pedidos" class="modal fade"></div>
+	<div id="usuario_lista_deseos" class="modal fade"></div>
+</script>
+
+<script type="text/template" id="usuario_edit_tpl">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"></span>
+				</button>
+				<div class="foto">
+				</div>
+				<h3>Editar Cuenta</h3>
+			</div>
+			<div class="modal-body">
+				<input type="file" style="visibility: hidden; display:none" id="foto_perfil" name="foto_perfil" />
+				<fieldset>
+					<legend>Personal:</legend>
+					<div class="form-group">
+						<label class="control-label" for="inputSuccess1">Nombre:</label>
+						<input type="text" class="form-control" name="nombre_user" value="{{first_name}}">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputSuccess1">Apellido:</label>
+						<input type="text" class="form-control" name="apellido_user" value="{{last_name}}">						
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputSuccess1">Genero:</label>
+						<select class="form-control" name="genero_user">
+							<option>Selecciona</option>
+							<option value="hombre">Hombre</option>
+							<option value="mujer">Mujer</option>
+							<option value="no_espesificar">No Especificar</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputSuccess1">*DNI:</label>
+						<input type="text" class="form-control" name="dni_user" value="{{dni}}">
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Informacion de Login:<span>*<em>requerido</em></span></legend>
+					<div class="form-group">
+						<label class="control-label" for="inputSuccess1">*Correo Electronico:</label>
+						<input type="email" class="form-control" name="nombre_user" value="{{email}}">
+					</div>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+		      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		      <button type="button" class="btn btn-primary salvar-cambios">Guardar Cambios</button>
+		    </div>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="usuario_direcciones_tpl">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">			
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"></span>
+				</button>
+				<h3>Lista de direcciones</h3>
+			</div>
+			<div class="modal-body">
+				<div class="">
+					<span>Direcciones Gravadas</span>
+					<a href="#">+ Nueva Direccion</a>					
+				</div>
+				<div class="mis-direccion no-list">
+					<div>
+						<div class="mini-titulo">Mi casa</div>
+						<div class="mini-dirccion">Calle los alamos 349 , la alborada Comas</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="usuario_pedidos_tpl">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Historial de Pedidos</h4>
+			</div>
+			<div class="modal-body">
+				{%if pedidos%}
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th># de Pedido</th>
+									<th>Gasto de Envio</th>
+									<th>Fecha de inicio</th>
+									<th>Fecha de final</th>
+									<th>Metdo de Pago</th>
+									<th>Estado del Pedido</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				{%else%}
+					<h4 class="text-center">
+						En este momento no tiene ningun pedido realizado , le invitamos a que revise nuestro <a href="/catalogo/ofertas/" class="link-modal">catalogo</a>  donde estamos seguros que encontrara algo para especial para usted.
+					</h4>
+				{%endif%}
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="lista_pedidos_tlp">
+	<td><strong><a href="#" class="no-link">{{numero_pedido}}</a></strong></td>
+	<td>Gratis!!</td>
+	<td>{{fecha_compra}}</td>
+	<td>
+		{%if fecha_final%}
+			{{fecha_final}}
+		{%else%}
+		<a href="/procesar-compra/" class="link"><u>En curso!!</u></a>			
+		{%endif%}		
+	</td>
+	<td>
+		{%if metodo_pago%}
+			{{metodo_pago}}
+		{%else%}
+			<a href="/procesar-compra/" class="link"><u>Sin Definir!!</u></a>						
+		{%endif%}
+	</td>
+	<td>{{estado_pedido}}</td>
+</script>
+
+<script type="text/template" id="usuario_lista_deseos_tpl">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Mi lista de deseos</h4>
+			</div>
+		</div>
+	</div>
+</script>
+{% endverbatim %}

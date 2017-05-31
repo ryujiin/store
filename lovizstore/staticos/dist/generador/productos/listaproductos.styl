@@ -1,0 +1,95 @@
+rosado = #F7727A
+
+.lista-productos
+	display flex
+	flex-wrap wrap
+	&.lista-uno
+		.productos
+			width 100%
+	.productos
+		position relative
+		padding 1em
+		background #fff
+		vertical-align top
+		width 50%
+		text-align center
+		transition width .3s
+		&:hover
+			border 1px solid #f4f4f4
+		.nuevo
+			position absolute
+			z-index 9
+			background aquamarine
+			text-transform uppercase
+			color #333
+			width 40px
+			height 40px
+			font-family f_imprenta
+			font-size 0.8em
+			line-height 40px
+			border-radius 40px
+			top 10px
+		.oferta
+			position absolute
+			z-index 9
+			background rosado
+			text-transform uppercase
+			color #fff
+			width 60px
+			height 60px
+			font-family f_imprenta
+			line-height 60px
+			border-radius 60px
+			top 10px
+			right 10px
+			font-size 1.25em
+			transform rotate(25deg)
+			transition all 0.5s linear
+		figure
+			padding-top 25px
+			img
+				width 100%
+		.imagen_lista
+			position relative
+			min-height 110px
+		.nombre_productos
+			font-family f_imprenta
+			font-weight bold
+			font-size 1.2em
+			span
+				display block
+				&.color_productos
+					font-size .8em
+					text-transform uppercase
+					font-weight 400
+		.estrellas
+			opacity 0
+		.precios
+			div
+				display inline-block
+				font-family f_imprenta
+			.old_precio
+				font-size 0.9em
+				margin 0 5px
+				text-decoration line-through
+				color rosado
+		&:hover
+			a
+				text-decoration none
+			.estrellas
+				opacity 1
+			.oferta				
+				transform rotate(-25deg)
+				
+@media (min-width: 768px)
+	.lista-productos 
+		.productos 
+			figure
+				min-height 160px
+@media (min-width: 992px)
+	.lista-productos
+		.productos
+			width 25%
+			&:hover
+				box-shadow 2px 3px 6px rgba(0,0,0,0.4)
+				z-index 2

@@ -1,0 +1,126 @@
+#nuevo_comentario
+	.error-form
+		display none
+	.modal-content
+		display flex
+	.imagen
+		padding 10px
+		background #333
+		display none
+		.figura
+			margin-top 10px
+			border-radius 10px
+			overflow hidden
+		.nombre
+			color #f4f4f4
+			font-family f_imprenta
+			font-size 18px
+			margin 10px
+			text-shadow 2px 3px 1px #111
+	.formulario
+		padding 10px
+		position relative
+		.close
+			font-size 40px
+			margin 15px
+		.form-group
+			border-top 1px solid #ddd
+			padding-top 20px
+		.estrellas_form
+			margin 0 40px
+			border 1px solid #ddd
+			border-radius 4px
+			overflow hidden
+			button
+				background: rgba(226,226,226,1);
+				border-top 1px solid #fff
+				border-bottom none
+				padding 3px 6px
+				&:hover
+					background-color #bbb			
+				&:first-child
+					border-left none
+				&:last-child
+					border-right none
+				&.activo
+					background: #111
+				&.hover
+					background-color #333
+			.glyphicon-star
+				font-size 1.5em
+				margin-top 5px
+				color #fff
+				text-shadow 1px 1px 0 rgba(140,140,140,0.6)
+		.content_coment
+			&.error
+				.opinion-content
+					border #a94442
+				.requerido
+					color #a94442
+					border 1px solid #a94442
+					padding 2px 5px
+					border-radius 5px
+			&.valido
+				.opinion-content
+					border #3c763d
+				.requerido
+					color #3c763d!important
+			.opinion-content
+				border 1px solid #ddd
+				&:hover
+					border 1px solid #111
+				.buton_subir
+					margin 10px				
+			.requerido
+				color #aaa
+				font-size 0.8em
+			.buton_subir
+				position relative
+				#foto_comentario
+					position absolute					
+					height 100%
+					opacity 0
+					width 80px
+		.autenticar_user
+			overflow hidden
+		.form-group
+			position relative
+			.icono_valido
+				display none
+				position absolute
+				right 30px
+				top 45%
+				line-height 10px
+				background-color #ccc
+				color #fff
+				padding 5px
+				border-radius 30px
+		.recomendaciones		
+			button.activo
+				background-color #444
+				color #fff
+		.terminos
+			label
+				text-transform inherit
+				font-weight normal
+			strong
+				cursor pointer
+			small
+				color #aaa
+				font-size 0.8em
+		.imagenes_subidas
+			margin 5px
+			display flex
+			.imagen_coment
+				width 30%
+				min-height 100px
+				position relative
+				background #111
+				color #fff
+@media (min-width: 768px)
+	#nuevo_comentario
+		.imagen
+			display block
+			width 25%
+		.formulario
+			width 75%

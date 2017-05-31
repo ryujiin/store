@@ -1,0 +1,179 @@
+{% verbatim %}	
+
+<script id="page_catalogo_template" type="text/template">
+	<section class="imagen_categoria">
+		{%if imagen%}
+		<img src="{{imagen}}">
+		{%endif%}
+	</section>
+	<div class="catalogo container">		
+		<div class="nav-breadcrumb">
+		</div>
+		<div class="section-refinamiento">
+			<span class="icon-cross cerrar_refino"></span>
+			<aside class="js-panel from-right">
+			    <div class="bloque categoria">
+			    </div>
+			    <div class="bloque colores">			    	
+			    </div>
+			    <div class="bloque tallas">
+			    </div>
+			    <div class="bloque">
+			    </div>
+			</aside>
+			<button class="btn btn-default refinar">Refinar Busqueda</button>
+			<div class="fondo_refinamiento"></div>
+		</div>
+		<div class="section-main search-result-wrapper">
+			<div class="titulo-categoria">
+				<div class="marco_titulo_catalogo">
+					<h1 class="titulo"><small>{{padre}}</small>{{nombre}}</h1>
+				</div>
+				<div class="catalogo_num_refino">
+				</div>
+			   </div>			    
+			 <div class="catalogo_productos lista-productos"></div>
+		</div>
+	</div>	
+</script>
+
+<script type="text/template" id="catalogo_num_refino_tlp">
+	<div class="btn btn-link refinar">Refinar por</div>
+	<span class="num_articulo">{{numero}} Articulo(s) |</span>
+	<div class="btn-group sort_by" role="group">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{%if sortby%}
+			{{sortby}}
+			{%else%}
+			Ordenar Por :
+			{%endif%}
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+		 <li>
+		 	<a href="#" class="no-link" data-sortby="precio_sort" data-modo="asc">
+		 		Precio - Menor a Mayor
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#" class="no-link" data-sortby="precio_sort" data-modo="desc">
+		 		Precio - Mayor a Menor
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#" class="no-link" data-sortby="vendidos" data-modo="desc">
+		 		Mas Vendidos
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#" class="no-link" data-sortby="id" data-modo="desc">
+		 		Mas Nuevo
+		 	</a>
+		 </li>
+		 <li>
+		 	<a href="#" class="no-link" data-sortby="sort_valoracion" data-modo="desc">
+		 		Mejor Valorados
+		 	</a>
+		 </li>
+		</ul>
+	</div>
+	<div class="modo_lista btn-group">
+		<button type="button" class="btn btn-default activo" data-lista="no">
+			<span class="glyphicon glyphicon-th-large"></span>
+		</button>
+		<button type="button" class="btn btn-default no-activo" data-lista="si">
+			<span class="glyphicon glyphicon-align-justify"></span>
+		</button>
+	</div>
+</script>
+
+<script id="titulo_catalogo_tlp" type="text/template">
+	<h1 class="titulo">
+        {%if nombre2%}
+          {{nombre}}
+          <small>
+            <span class="icono-triangulo-left"></span>{{nombre1}} de {{nombre2}}<span class="icono-triangulo-right">
+          </small>
+        {%else%}
+          {%if nombre1%}
+            {{nombre}}
+            <small>
+              <span class="icono-triangulo-left"></span>{{nombre1}}<span class="icono-triangulo-right">
+            </small>
+          {%else%}
+            {{nombre}}
+          {%endif%}
+        {%endif%}
+      </h1>
+</script>
+
+<script id="imagen_catalogo_tlp" type="text/template">
+	{%if imagen%}
+		<img src="{{imagen}}" >
+	{%endif%}
+</script>
+
+<script id="categoria_bloque_tlp" type="text/template">
+	<div class="titulo_bloque">
+		<h2>{{nombre}}</h2>
+	</div>
+	<div class="cuerpo_bloque">
+		<ul></ul>
+	</div>
+</script>
+
+<script id="categoria_link_tlp" type="text/template">
+	{%if filtro%}
+		<div class="link_refinamiento" data-filtro="{{filtro}}" data-valor="{{nombre}}">
+			{%if filtro =='color'%}
+				<span class="color-html" style="background:{{hexdecimal}}"></span>
+			{%endif%}
+			<span class="filtro">{{nombre}}</span>
+		</div>
+	{%else%}
+	<a class="link" href="/catalogo/{{slug}}/">{{nombre}}</a>
+	{%endif%}
+</script>
+
+<script id="refinamiento_link_tlp" type="text/template">
+	<li data-filtro="{{filtro}}" data-valor="{{valor}}">
+		{%if filtro =='color'%}
+			<span class="color-html {{hexadecimal}}"></span>
+		{%endif%}
+		<span class="filtro">{{nombre}}</span>
+	</li>
+</script>
+
+<script id="productosLista_tlp" type="text/template">
+	<a href="{{link}}" class="link">
+		{%if en_oferta%}
+		<div class="oferta">Oferta</div>
+		{%endif%}
+		<figure class="imagen_lista">
+			<img src="{{thum}}">
+		</figure>
+	    <div class="nombre_productos">
+	    	<span>{{nombre}}</span>
+	    	<span class="color_productos">"{{color}}"</span>
+	    </div>
+	    <div class="precios">
+	      {%if en_oferta%}    
+	        <div class="old_precio"><span>S/. {{precio}}</span></div>     
+	      {%endif%}
+	      <div class="current_precio"><span>S/. {{precio_venta}}</span></div>
+	    </div>
+	    <div class="estrellas"></div>
+	</a>
+</script>
+
+<script id="222productosLista_tlp" type="text/template">
+	<figure class="imagen_lista">
+			{%for img in imagenes_producto%}
+				{%if img.orden <= 1 %}
+					<img src="{{img.imagen_medium}}">
+				{%endif%}
+			{%endfor%}
+		</figure>
+</script>
+
+{% endverbatim %}

@@ -1,0 +1,244 @@
+.carro_page
+	padding-top 50px
+	.titulo
+		display none
+	.btn
+		width 100%
+	.orden_resumen
+		padding 15px
+		table
+			width 100%
+	.resumen_carro
+		.marco_resumen
+			box-shadow 0 2px 5px rgba(0,0,0,.16)
+			border 1px solid #f4f4f4
+			padding 15px
+		.titulo_resumen
+			font-family f_imprenta
+			text-transform uppercase
+			font-size 0.9em
+			letter-spacing 2px
+		.texto_envio
+			font-family f_imprenta
+			background #f4f4f4
+			text-transform uppercase
+			font-size 0.8em
+			margin-top 10px
+			letter-spacing 2px
+		.seguridad
+			
+			.icono-seguridad
+				margin-top 20px
+				width 54px
+				height 34px
+				display inline-block
+				background-image url('../imgs/payment.png')
+				&.mastercard
+					background-position-x -213px
+				&.paypal
+					background-position-x -159px
+				&.visa
+					background-position-x -106px								
+.todas_lineas_carro
+	strong
+		font-family f_imprenta
+		text-transform uppercase
+.lineas_carro
+	border-top 2px solid #f4f4f4
+	.etiquetas
+		display none
+	.linea
+		position relative
+		overflow hidden
+		padding 10px 0
+		border-top 1px solid #f4f4f4
+		.acciones_linea
+			position absolute
+			font-family f_imprenta
+			text-transform uppercase
+			font-weight bold
+			right 0
+			.eliminar
+				cursor pointer
+		.img_linea
+			width 30%
+			float left
+		.detalle_linea
+			font-size 0.8em
+			.nombre
+				font-family f_imprenta
+				font-weight bold
+				text-transform uppercase
+				font-size 20px
+			.color
+				text-transform uppercase
+		.caja_detalle_movil
+			float right
+			width 70%
+			padding-left 20px
+		.precio_linea
+			border-bottom 1px solid #f4f4f4
+			padding-bottom 10px			
+		.cantidad_linea
+			padding-top 5px
+			margin 10px
+			float left
+			padding-left 25%
+			.etiqueta_mobil
+				display none
+			.cantidad
+				border 1px solid #f4f4f4
+				padding 8px 20px
+			.cant
+				cursor pointer
+				display inline-block
+				color #ccc
+				&:hover
+					color #333
+		.subtotal_linea
+			font-weight bold
+			float right
+			margin-top 10px
+			.etiqueta_mobil
+				display inline-block
+	.carga_linea
+		display none
+		z-index 2
+		width 100%
+		position absolute
+		height 100%
+		background-color rgba(255,255,255,0.5)
+		left 0
+
+.total_carro
+	margin 30px 0
+	table
+		width 100%
+		font-size 1.1em
+		tr
+			td
+				padding 8px
+				border-top 1px solid #f4f4f4
+				&.sin-borde
+					border-top none
+		.tabla_total_carro
+			font-size 1.2em
+.mini-cart
+	position relative
+	.mini-cart-label
+		display none
+	.mini-cart-container .icon-cart-stripe
+		color #f3f3f3
+	.mini-cart-label-movil
+			display none
+	.mini-cart-items
+		background #468847
+		width: 20px;
+		display: inline-block;
+		line-height: 20px;
+		text-align: center;
+		border-radius: 10px;
+		position: absolute;
+		right: -5px;
+		top: 10px;
+		font-weight: 700;
+		font-size: .8em;
+	.mini_cart_lineas
+		display none
+.carro_no_items
+	padding 100px
+	
+@media (min-width: 480px)
+	.mini-cart 
+		.mini-cart-label-movil
+			display inline-block
+
+@media (min-width: 992px)
+	.carro_page
+		.orden_resumen
+			display none
+	.mini-cart
+		float right
+		position relative
+		line-height 5pc
+		z-index 200
+		padding 0 25px
+		height 100%
+		&:hover
+			background #f4f4f4			
+			.mini_cart_head
+				cursor pointer
+			.mini_cart_lineas
+				display block
+		.mini_cart_head
+			font-family f_imprenta					
+			letter-spacing 1px
+		.mini-cart-label
+			display inline-block
+		.mini-cart-label-movil		
+			display none
+		.mini-cart-container .icon-cart-stripe
+			font-size 1.4em
+			vertical-align text-bottom
+		.mini-cart-items
+			color #fff
+			width: 20px;
+			display: inline-block;
+			line-height: 20px;
+			text-align: center;
+			border-radius: 10px;
+			position: absolute;
+			right: 10px;
+			top: 20px;
+			font-weight: 700;
+			font-size: .8em;
+		.mini_cart_lineas
+			position absolute
+			display none
+			background #fff
+			width 25em
+			top 86px
+			right 0
+			box-shadow 0 2px 5px rgba(0,0,0,.16)
+			.mini-cart-header
+				font-size 15px
+				padding 1em
+				margin 0px
+			.lineas-mini-cart
+				.mini-linea
+					display flex
+					padding 1em
+					border-bottom 1px solid #f4f4f4
+					.mini-linea-imagen
+						width 120px
+					.mini-linea-datos
+						line-height initial
+						margin-left 15px
+						h3
+							margin 0
+							font-size 15px
+							letter-spacing 1px
+							&:hover
+								text-decoration underline
+						.item
+							font-size 0.9em
+						.precios
+							font-weight bold
+							font-family georgia
+							font-size 14px
+			.mini-cart-subtotal
+				line-height initial
+				padding 0.5em
+				background #f4f4f4
+				text-align right
+				.value
+					margin-left 10px
+			.mini-cart-botones
+				padding-top 10px 
+				margin-bottom 20px
+
+@media (min-width: 1200px)
+	.carro_page
+		.orden_resumen
+			display none
+	

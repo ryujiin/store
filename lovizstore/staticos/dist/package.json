@@ -1,0 +1,13 @@
+{
+  "name": "lovizdc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "styl": "stylus --use nib --watch generador/app2.styl --out css/",
+    "styloficina": "stylus --use nib --watch oficina/oficina.styl --out ../staticos/css/",
+    "jade": "jade app/lib/index.jade --pretty --watch --out ./app/"
+  }
+}

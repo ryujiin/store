@@ -1,0 +1,138 @@
+{% verbatim %}	
+
+<script id="page_tema1_template" type="text/template">
+	<section id="seccion_top">
+	</section>	
+	<section id="middle" class="container">
+		<div class="row">
+			<section id="seccion_left" class="col-md-12">
+				<h1 class="titulo_page">{{titulo}}</h1>
+				<div class="contenido">{{contenido|safe}}</div>
+			</section>			
+			<section id="seccion_left" class="col-md-2"></section>
+			<section id="seccion_center" class="col-md-8">{{cuerpo|safe}}</section>	
+			<section id="seccion_right" class="col-md-2"></section>
+		</div>		
+	</section>	
+	<section id="seccion_bottom"></section>
+</script>
+
+<script type="text/template" id="reset_password_tlp">
+	<div class="container">
+		<h2 class="titulo">Crear Una Nueva Contraseña</h2>
+		<p class="texto-ayuda"></p>
+		<form>
+			<div class="form-group cont-pass">
+				<label>Nueva Contraseña*</label>
+				<input type="password" maxlength="255" class="form-control pass">
+				<p>8 - 255 caracteres</p>
+			</div>
+			<div class="form-group cont-pass2">
+				<label>Confirma Contraseña*</label>
+				<input type="password" maxlength="255" class="form-control pass2">
+			</div>
+			<button type="submit" class="btn btn-contraste">Enviar Contraseña</button>
+		</form>
+	</div>
+</script>
+
+<script id="Carrusel_productos_template" type="text/template">
+	<h2><span class="izq line"></span> Novedades <span class="der line"></span></h2>
+	<h3>tus pies las Amaran</h3>
+	<div class="carruseles lista-productos"></div>
+</script>
+
+<script id="menu_template" type="text/template">
+	<h4 class="titulo_menu">{{titulo}}</h4>
+    <ul class="nav nav-pills nav-stacked">    
+    </ul> 
+</script>
+
+<script id="breadcrumb_tlp" type="text/template">
+	<ol class="breadcrumb">
+	</ol>	
+</script>
+
+<script id="bloque_carrusel_img" type="text/template">
+	{%for img in imagenes_carrusel%}	
+		<div class="item">
+			<a href="{{img.link}}" class="link {{img.estilo}}">
+				<img src="{{img.imagen}}" alt="{{img.titulo}}">
+			</a>
+		</div>		
+	{%endfor%}
+</script>
+
+<script id="breadcrumb_link_tlp" type="text/template">
+	{%if link%}
+		<a href="{{link}}" class="link">{{nombre}}</a>
+	{%else%}
+		<span class="last">{{nombre}}</span>
+	{%endif%}
+</script>
+
+<script id="bloque_ajax_tlp" type="text/template">
+	<div class="bubblingG">
+		<span id="bubblingG_1">
+		</span>
+		<span id="bubblingG_2">
+		</span>
+		<span id="bubblingG_3">
+		</span>
+	</div>
+</script>
+
+<script id="loader_min" type="text/template">
+	<div class="fondo_ajax">
+		<div class="img_ajax ajax"></div>
+		<div class="text_ajax ajax"></div>
+	</div>
+</script>
+
+<script id="page_error_template" type="text/template">
+	<div id="error_page">
+		<div class="cobertura"></div>
+		<div class="container">
+			<div class="errorTitle col-md-12">
+				Oops! - Error 404 , pagina no encontrada
+			</div>
+			<div class="errorsenti col-md-12">
+				Lo sentimos mucho
+			</div>
+			<div class="reallyLoud col-md-12">
+				Esto es Incomodo
+			</div>
+			<div class="explicacion col-md-7">
+				Al parecer, Esta pagina se tomo el dia libre para alimentar su adiccion a los zapatos, y este probablemente, enterrado bajo una pila de cueros y tachuelas. Es nuestro error lo solucionaremos... Te amamos!
+			</div>
+		</div>
+		
+	</div>	
+</script>
+
+<script id="bloque_suscribir_up_tmp" type="text/template">
+	<div class="cerrar">
+		<span class="glyphicon glyphicon-remove"></span>
+	</div>
+	<div class="contenedor">		
+		<h4>Newsletter</h4>
+		<h2>Obten 10% de Descuento</h2>
+		<form class="form_bloq_up">
+			<input type="email" class="form-control email">
+			<input type="submit" class="submit">	
+		</form>
+		<h3>Y se el primero en obtener descuentos y oferta exclusiva.</h3>
+	</div>	
+</script>
+
+<script id="ajax_loader_tlp" type="text/template">
+	<div class="container-fluid">
+		<div class="cssload-loader">
+			<div class="cssload-inner cssload-one"></div>
+			<div class="cssload-inner cssload-two"></div>
+			<div class="cssload-inner cssload-three"></div>
+		</div>
+		<div id="spinningTextG"><div id="spinningTextG_1" class="spinningTextG">C</div><div id="spinningTextG_2" class="spinningTextG">a</div><div id="spinningTextG_3" class="spinningTextG">r</div><div id="spinningTextG_4" class="spinningTextG">g</div><div id="spinningTextG_5" class="spinningTextG">a</div><div id="spinningTextG_6" class="spinningTextG">n</div><div id="spinningTextG_7" class="spinningTextG">d</div><div id="spinningTextG_8" class="spinningTextG">o</div></div>
+	</div>	
+</script>
+{% endverbatim %}

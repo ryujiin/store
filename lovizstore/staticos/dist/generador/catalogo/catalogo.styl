@@ -1,0 +1,152 @@
+.catalogo
+	//nuevo
+	.marco_titulo_catalogo
+		text-align center
+	.titulo
+		display inline-block
+		font-size 24px
+		small
+			display block
+			font-size 0.5em
+	.catalogo_num_refino
+		box-shadow 0 2px 5px rgba(0,0,0,.16)
+		display flex
+		justify-content space-between
+		align-items center
+		.num_articulo
+			display none
+			font-style italic
+			font-family georgia
+			font-size 0.8em
+		.dropdown-menu
+			right 0
+			left inherit
+		.modo_lista
+			button
+				border 1px solid #f1f1f1
+			.activo
+				background #f1f1f1
+				color #f1f1f1	
+		.sort_by
+			display none		
+	.catalogo_productos
+		margin-top 10px		
+	.section-refinamiento
+		position: fixed;
+		height: 100%;
+		top: 60px;
+		left: 0;
+		border: 1px solid #ddd;
+		z-index: 100;
+		background: #fff;
+		width: 300px;
+		transform translatex(-300px)
+		transition: all 1s ease;
+		&.activate
+			transform translatex(0px)
+			.fondo_refinamiento
+				display block
+		.cerrar_refino
+			float: right;
+			margin: 6px;
+			border: 1px solid;
+			padding: 5px;
+			border-radius: 34px;
+			cursor pointer
+		.refinar
+			display none
+			transform: rotate(-90deg);
+			position absolute
+			top 40%
+			right -118px
+			&:hover
+				background #468847
+				border-color #3d773e
+		.fondo_refinamiento
+			display none
+			background: rgba(0,0,0,0.5);
+			width: 1000%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 299px;
+			z-index: 1;
+			transition: all 1s ease;
+		.bloque
+			margin 10px
+			border-bottom 1px solid #ddd
+			.titulo_bloque
+				h2
+					font-size 1.4em
+			.cuerpo_bloque
+				ul
+					padding 0px	
+					li
+						list-style none
+						cursor pointer
+						&:hover
+							font-style italic
+					.refinado_link
+						background #333
+						color #fff
+						border-radius 10px
+						padding 1px 10px
+			&.categoria
+				a
+					display inline-block
+					width 100%
+					padding 0 10px 
+					&:hover
+						background #f4f4f4
+			&.colores
+				ul
+					li
+						width 49%
+						display inline-block
+						.color-html
+							border 1px solid #ddd
+							width 15px
+							height 15px
+							border-radius 15px
+							border: 1px solid #ddd;
+							display: inline-block;
+							margin-right: 10px;
+			&.tallas
+				li
+					width: 80px;
+					display: inline-block;
+					text-align: center;
+					margin: 5px;
+					border: 1px solid #ddd;
+					&:hover
+						background #111
+						color #fff
+@media (min-width: 768px)
+	.catalogo
+		.section-refinamiento			
+			aside
+				&.siguiendo
+					position fixed
+					width 25%
+					top 90px
+	
+
+@media (min-width: 992px)
+	.catalogo
+		.section-refinamiento			
+			top 118px
+		.titulo-categoria
+			display flex
+			.marco_titulo_catalogo
+				width 20%
+			.catalogo_num_refino
+				box-shadow none
+				width 80%
+				display flex
+				justify-content flex-end
+				.num_articulo
+					display block
+				.sort_by
+					display block
+				.modo_lista
+					display none

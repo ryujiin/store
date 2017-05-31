@@ -1,0 +1,81 @@
+#footer
+	background #f4f4f4
+	padding-top 3em
+	.footer-email
+		max-width 360px
+		margin 0 auto
+	#submit_email_wrapper
+		min-height 100px
+	#submit_form_email
+		position relative		
+		.email_input
+			position absolute
+			width 90%
+			input
+				background #ececec
+				border 1px solid #ccc
+				padding 25px 20px
+				color #111
+		.email_submit
+			position absolute
+			right 0	
+			button
+				background #111
+				border none
+				color #fff
+				line-height 0px
+				padding 18px 20px
+				&:hover
+					background rgba(0,0,0,.6)
+	.footer-block-menu
+		h4
+			font-size 1.05em
+			border-bottom 1px solid #ccc
+			cursor pointer
+			margin 0 0 10px
+			padding 10px 0 5px
+			&:after
+				content '+'
+				display inline-block
+				padding-left 2px				
+		ul
+			display none
+			li
+				margin-bottom 5px
+				a
+					padding 0
+					font-size 0.9em
+					&:hover
+						text-decoration underline
+						background none
+			&.activo
+				display block
+		&.activo
+			h4
+				&:after
+					content '-'	
+	.bloque_social
+		overflow hidden
+		ul			
+			float right	
+		li
+			display inline-block
+			margin 10px 10px
+			span
+				font-size 1.5em
+	.pie_pagina
+		border-top #dddddd 1px solid
+		padding-top 5px
+		font-size 0.8em
+		padding-bottom 20px
+		ul
+			list-style none
+			margin 0
+			padding 0
+@media (min-width: 1170px)
+	#footer
+		.footer-block-menu
+			h4:after
+				content ''				
+			ul
+				display block

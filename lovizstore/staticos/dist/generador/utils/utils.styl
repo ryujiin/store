@@ -1,0 +1,140 @@
+a
+	color #111
+	&:hover
+		color #111
+.clear
+	clear both
+.ajax_full
+	width 100%
+	height 100%	
+	position fixed
+	top 0
+	background rgba(255, 255, 255, 0.9)	
+	z-index 2000
+	padding-top 50%
+	.fondo_ajax
+		width 150px
+		margin 0 auto
+		.ajax
+			background-repeat no-repeat
+			background-position center
+			width 150px
+			height 64px
+		.img_ajax
+			background-image url('../imgs/ajaxloader.gif')			
+		.text_ajax
+			background-image url('../imgs/letrajax.gif')						
+.bloque_sus_up
+	display none;
+	position fixed
+	bottom 0
+	background rgba(0,0,0,0.9)
+	color #fff
+	width 100%
+	padding 10px
+	z-index 10
+	.cerrar
+		position absolute
+		width 25px
+		height 25px
+		top -35px
+		right 20%
+		color #000
+		cursor pointer
+		span
+			border 2px solid #000
+			border-radius 20px
+			padding 3px
+			
+	.contenedor
+		width 500px
+		margin 0 auto
+		text-align center
+		position relative			
+		form
+			position relative
+			.submit
+				position absolute
+				padding 6px
+				top 0
+				right 0
+				background #111
+				border none
+		h2
+			font italic 25px Georgia
+			text-transform none
+.box_contraste
+	background #111
+	color #fff
+	a
+		color #fff
+.clear_both
+	clear both
+img
+	width 100%
+.enlinea
+	display inline-block
+.label
+	color #111
+
+nav	.nav-pills
+	a
+		padding 5px
+		&:hover,&.active,&:focus
+			background none
+			text-decoration underline
+.overflow
+	overflow hidden
+.pull-right
+	float right
+p.bg-warning
+	padding 10px
+
+.modal-content
+	border-radius 0px
+.sidebar-overlay
+	background-color rgba(255,255,255,.6)
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index 100
+	display none
+.panel
+	border-radius 0px
+	.panel-heading
+		font-weight 700
+		background none
+		font-family f_imprenta
+		text-transform uppercase
+		font-size 1.15em
+		letter-spacing 2px
+#ajaxloader_img
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 8px solid #fff;
+	border-right-color: transparent;
+	border-radius: 50%;
+	box-shadow: 0 0 25px 2px #eee;
+	top 35%
+	left 40%
+#ajaxloader_img
+	animation: spin 1s linear infinite
+ul.menu
+	padding 0
+	margin 0
+	li
+		list-style none	
+fieldset
+	legend
+		em
+			font-size 0.7em
+	
+@media (min-width: 768px)
+	.ajax_full
+		padding-top 30%
+@media (min-width: 1200px)
+	.ajax_full
+		padding-top 20%
